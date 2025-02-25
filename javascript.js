@@ -20,37 +20,39 @@ function getComputerChoice(){
 let scoreComputer =0;
 let scoreHuman =0;
 
-function playRound(humanChoice, computerChoice) {
-    let humanChoice= getHumanChoice()
-    let computerChoice = getComputerChoice()
-
-    if (humanChoice == computerChoice) {
-        console.log("It's a tie!")
-    } else if (humanChoice == "scissor" && computerChoice == "paper"){
-        console.log("You won! Scissor beats paper")
-        scoreHuman++;
-    } else if (humanChoice == "scissor" && computerChoice == "rock") {
-        console.log(`You lost! Rock beats scissor`)
-        scoreComputer++;
-    } else if (humanChoice == "rock" && computerChoice == "scissor") {
-        console.log(`You won! Rock beats scissor`)
-        scoreHuman++;
-    } else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log(`You lost! Paper beats rock`)
-        scoreComputer++;
-    } else if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log(`You won! Paper beats rock`)
-        scoreHuman++;
-    } else if (humanChoice == "paper" && computerChoice == "scissor") {
-        console.log(`You lost! Scissor beats paper`)
-        scoreComputer++;
-    } else {console.log(`You had a type error`)}
-
-    console.log(`Score \n Computer: ${scoreComputer} \n You: ${scoreHuman}`
-    )
-}
-
 function playGame(){
+    function playRound(humanChoice, computerChoice) {
+        humanChoice= getHumanChoice()
+        computerChoice = getComputerChoice()
+    
+    
+        humanChoice = humanChoice.toLowerCase(); 
+    
+        if (humanChoice == computerChoice) {
+            console.log("It's a tie!")
+        } else if (humanChoice == "scissor" && computerChoice == "paper"){
+            console.log("You won! Scissor beats paper")
+            scoreHuman++;
+        } else if (humanChoice == "scissor" && computerChoice == "rock") {
+            console.log(`You lost! Rock beats scissor`)
+            scoreComputer++;
+        } else if (humanChoice == "rock" && computerChoice == "scissor") {
+            console.log(`You won! Rock beats scissor`)
+            scoreHuman++;
+        } else if (humanChoice == "rock" && computerChoice == "paper") {
+            console.log(`You lost! Paper beats rock`)
+            scoreComputer++;
+        } else if (humanChoice == "paper" && computerChoice == "rock") {
+            console.log(`You won! Paper beats rock`)
+            scoreHuman++;
+        } else if (humanChoice == "paper" && computerChoice == "scissor") {
+            console.log(`You lost! Scissor beats paper`)
+            scoreComputer++;
+        } else {console.log(`You had a type error`)}
+    
+        console.log(`Score \n Computer: ${scoreComputer} \n You: ${scoreHuman}`
+        )
+    }
 playRound()
 playRound()
 playRound()
