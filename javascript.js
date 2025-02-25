@@ -1,9 +1,3 @@
-// plan:
-// -create a function that returns rock / paper or scissors randomly for the computer
-// -create a function for human input 
-// -create make sure that the two answers are compared
-// -create a message if you won 
-
 let humanChoice;
 let computerChoice;
 
@@ -12,8 +6,6 @@ function getHumanChoice() {
     console.log(`You chose ${humanChoice}`);
     return humanChoice;
 }
-
-getHumanChoice();
 
 function getComputerChoice(){
     let random = Math.random();
@@ -24,19 +16,14 @@ function getComputerChoice(){
          console.log(`The computer chose ${computerChoice}`);
          return computerChoice;
         }
-getComputerChoice();
 
 let scoreComputer =0;
 let scoreHuman =0;
 
-console.log(typeof(humanChoice));
-
-// let humanChoiceNew;
-//     string humanChoiceNew = humanChoice.toLowerCase();
-
-
 function playRound(humanChoice, computerChoice) {
-    
+    let humanChoice= getHumanChoice()
+    let computerChoice = getComputerChoice()
+
     if (humanChoice == computerChoice) {
         console.log("It's a tie!")
     } else if (humanChoice == "scissor" && computerChoice == "paper"){
@@ -63,8 +50,12 @@ function playRound(humanChoice, computerChoice) {
     )
 }
 
-playRound()
-
 function playGame(){
-    
-}
+playRound()
+playRound()
+playRound()
+playRound()
+playRound()
+};
+
+playGame()
